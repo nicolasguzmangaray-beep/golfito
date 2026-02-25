@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Heritage Club | Constitución de Identidad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@100;300;400;600&display=swap');
+        
+        :root {
+            --gold: #c5a059;
+            --deep-green: #04231b;
+            --soft-cream: #f9f7f2;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--soft-cream);
+            color: var(--deep-green);
+        }
+
+        h1, h2, h3, .serif {
+            font-family: 'Bodoni Moda', serif;
+        }
+
+        .vertical-sidebar {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            letter-spacing: 0.6em;
+        }
+
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .gold-border {
+            border: 1px solid rgba(197, 160, 89, 0.3);
+        }
+
+        .image-container {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-container img {
+            transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 mix-blend-difference py-8 px-12 flex justify-between items-center text-white">
+        <div class="text-2xl font-bold tracking-[0.4em] serif">HERITAGE</div>
+        <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.4em] font-light">
+            <a href="#intro" class="hover:text-amber-500 transition">Legado</a>
+            <a href="#factores" class="hover:text-amber-500 transition">Factores</a>
+            <a href="#contacto" class="hover:text-amber-500 transition">Privé</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&q=80&w=2000" 
+                 alt="[Vista panorámica del campo de golf]" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+        <div class="relative z-10 text-center text-white px-6">
+            <h1 class="text-6xl md:text-8xl mb-6 italic">La Esencia del Prestigio</h1>
+            <p class="uppercase tracking-[0.8em] text-xs font-light opacity-80">Identidad Corporativa & Visión de Clase Mundial</p>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white animate-bounce">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <div class="flex flex-col md:flex-row relative">
+        
+        <!-- Sidebar Fiel a la Imagen -->
+        <aside class="hidden md:flex w-24 bg-white border-r border-stone-100 items-center justify-center sticky top-0 h-screen z-40">
+            <span class="vertical-sidebar uppercase text-[9px] font-bold text-stone-300">
+                ELEMENTOS DE LA ID CORPORATIVA
+            </span>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1">
+            
+            <!-- Introduction -->
+            <section id="intro" class="py-32 px-10 md:px-24">
+                <div class="max-w-4xl reveal">
+                    <span class="text-amber-600 uppercase tracking-widest text-[10px] font-bold">Conceptos Fundamentales</span>
+                    <h2 class="text-4xl md:text-6xl mt-6 mb-12 text-emerald-950">Factores que Influyen en la Identidad</h2>
+                    <p class="text-xl text-stone-500 font-light leading-relaxed">
+                        La identidad corporativa de un club de élite no es un diseño azaroso; es una construcción sólida basada en cinco pilares inamovibles que definen cómo el mundo percibe nuestra excelencia.
+                    </p>
+                </div>
+            </section>
+
+            <!-- 1. EL FUNDADOR -->
+            <section id="fundador" class="py-20 px-10 md:px-24 grid md:grid-cols-2 gap-20 items-center">
+                <div class="reveal">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="serif text-4xl text-amber-600">01</span>
+                        <div class="h-px w-12 bg-amber-600"></div>
+                        <h3 class="serif text-3xl uppercase tracking-widest">El Fundador</h3>
+                    </div>
+                    <div class="space-y-6 text-stone-500 font-light leading-relaxed">
+                        <p>
+                            El fundador es el **arquitecto del alma** de la organización. Su visión original inyecta los valores genéticos que perduran a través de los siglos. En un club de prestigio, el fundador no solo establece un negocio, sino un código de conducta.
+                        </p>
+                        <ul class="space-y-2 text-sm italic">
+                            <li><i class="fas fa-check text-amber-600 mr-2"></i> Visión Filosófica Original</li>
+                            <li><i class="fas fa-check text-amber-600 mr-2"></i> ADN de Valores Éticos</li>
+                            <li><i class="fas fa-check text-amber-600 mr-2"></i> Estándares de Calidad Fundacionales</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="image-container rounded-sm shadow-2xl reveal">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=800" alt="[Retrato del Fundador]" class="w-full h-[500px] object-cover">
+                </div>
+            </section>
+
+            <!-- 2. LAS PERSONAS CLAVE -->
+            <section id="personas" class="py-20 px-10 md:px-24 grid md:grid-cols-2 gap-20 items-center bg-white">
+                <div class="order-2 md:order-1 image-container rounded-sm shadow-2xl reveal">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800" alt="[Líderes de la organización]" class="w-full h-[500px] object-cover">
+                </div>
+                <div class="order-1 md:order-2 reveal">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="serif text-4xl text-amber-600">02</span>
+                        <div class="h-px w-12 bg-amber-600"></div>
+                        <h3 class="serif text-3xl uppercase tracking-widest">Las Personas Clave</h3>
+                    </div>
+                    <div class="space-y-6 text-stone-500 font-light leading-relaxed">
+                        <p>
+                            Son los **guardianes de la consistencia**. El equipo directivo y los líderes de opinión interna aseguran que la identidad no se diluya. Son los responsables de proyectar autoridad y confianza tanto a socios como a empleados.
+                        </p>
+                        <p>
+                            Su rol es estratégico: convertir la visión del fundador en una gestión impecable del día a día, manteniendo el estatus de exclusividad.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. LA HISTORIA -->
+            <section id="historia" class="py-20 px-10 md:px-24">
+                <div class="relative h-[600px] rounded-sm overflow-hidden reveal">
+                    <img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&q=80&w=1500" alt="[Campo de golf histórico]" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-emerald-950/60 flex items-center justify-center p-12">
+                        <div class="max-w-2xl text-center text-white">
+                            <div class="flex items-center justify-center gap-4 mb-6">
+                                <span class="serif text-4xl text-amber-500">03</span>
+                                <h3 class="serif text-4xl uppercase tracking-[0.3em]">La Historia</h3>
+                            </div>
+                            <p class="text-lg font-light leading-loose">
+                                La historia otorga **legitimidad y mística**. Una marca con pasado es una marca con autoridad. Los hitos alcanzados, los torneos legendarios y la evolución del club configuran una narrativa que el mercado respeta y desea pertenecer.
+                            </p>
+                            <div class="mt-8 pt-8 border-t border-white/20 uppercase tracking-[0.4em] text-[10px]">
+                                El Tiempo como Validador del Lujo
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. LOS INDIVIDUOS -->
+            <section id="individuos" class="py-20 px-10 md:px-24 grid md:grid-cols-2 gap-20 items-center">
+                <div class="reveal">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="serif text-4xl text-amber-600">04</span>
+                        <div class="h-px w-12 bg-amber-600"></div>
+                        <h3 class="serif text-3xl uppercase tracking-widest">Los Individuos</h3>
+                    </div>
+                    <div class="space-y-6 text-stone-500 font-light leading-relaxed">
+                        <p>
+                            La identidad es **vivida por las personas**. Cada empleado, caddie y socio del club es un micro-embajador de la marca. Si los individuos no están alineados con la cultura corporativa, la identidad se fragmenta.
+                        </p>
+                        <p>
+                            El sentido de pertenencia y la internalización de los valores por parte de los individuos son lo que finalmente crea la "experiencia de marca" que el socio percibe.
+                        </p>
+                    </div>
+                </div>
+                <div class="image-container rounded-sm shadow-2xl reveal">
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=800" alt="[Individuos interactuando]" class="w-full h-[500px] object-cover">
+                </div>
+            </section>
+
+            <!-- 5. LA SOCIEDAD -->
+            <section id="sociedad" class="py-20 px-10 md:px-24 grid md:grid-cols-2 gap-20 items-center bg-white">
+                <div class="order-2 md:order-1 image-container rounded-sm shadow-2xl reveal">
+                    <img src="https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?auto=format&fit=crop&q=80&w=800" alt="[Impacto en la comunidad]" class="w-full h-[500px] object-cover">
+                </div>
+                <div class="order-1 md:order-2 reveal">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="serif text-4xl text-amber-600">05</span>
+                        <div class="h-px w-12 bg-amber-600"></div>
+                        <h3 class="serif text-3xl uppercase tracking-widest">La Sociedad</h3>
+                    </div>
+                    <div class="space-y-6 text-stone-500 font-light leading-relaxed">
+                        <p>
+                            La identidad se proyecta hacia el exterior para generar **reputación**. La sociedad juzga la coherencia de la organización a través de su impacto ambiental, social y ético.
+                        </p>
+                        <p>
+                            Un club de golf de alta gama debe ser un ciudadano corporativo ejemplar, demostrando que su prestigio no solo es estético, sino también responsable con su entorno.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer id="contacto" class="bg-emerald-950 text-white py-24 px-10">
+                <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-16">
+                    <div class="max-w-sm">
+                        <div class="text-2xl font-bold tracking-[0.4em] serif mb-6">HERITAGE</div>
+                        <p class="text-sm font-light opacity-60 leading-loose">
+                            Análisis basado en los Elementos de la Identidad Corporativa. Muestra empresarial diseñada para la excelencia visual.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-12">
+                        <div>
+                            <h4 class="text-amber-500 uppercase tracking-widest text-[10px] mb-6 font-bold">Navegación</h4>
+                            <ul class="text-sm space-y-3 font-light opacity-80">
+                                <li><a href="#" class="hover:text-amber-500 transition">Constitución</a></li>
+                                <li><a href="#" class="hover:text-amber-500 transition">Valores</a></li>
+                                <li><a href="#" class="hover:text-amber-500 transition">Torneos</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-amber-500 uppercase tracking-widest text-[10px] mb-6 font-bold">Privacidad</h4>
+                            <ul class="text-sm space-y-3 font-light opacity-80">
+                                <li>Términos Legales</li>
+                                <li>Código Ético</li>
+                                <li>Políticas de ID</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="max-w-6xl mx-auto mt-20 pt-12 border-t border-white/10 flex justify-between items-center text-[9px] uppercase tracking-[0.5em] opacity-40">
+                    <span>© 2024 Prestige Legacy Study</span>
+                    <div class="flex gap-6">
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        // Reveal Animations on Scroll
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        revealElements.forEach(el => observer.observe(el));
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
